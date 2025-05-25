@@ -1,5 +1,5 @@
 # monaco-vscode-server
-[![crates.io](https://img.shields.io/crates/v/monaco-vscode-server.svg)](https://crates.io/crates/monaco-vscode-server)
+[![crates.io](https://img.shields.io/crates/v/monaco-vscode-server.svg)](https://crates.io/crates/monaco-vscode-server) [![crates.io downloads](https://img.shields.io/crates/d/monaco-vscode-server.svg)](https://crates.io/crates/monaco-vscode-server)
 
 A Rust crate for managing VSCode server backend for applications using [monaco-vscode-api](https://github.com/CodinGame/monaco-vscode-api).
 
