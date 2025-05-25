@@ -1,0 +1,33 @@
+[package]
+name = "monaco-vscode-server"
+version = "0.1.0"
+edition = "2024"
+authors = ["Shawn McAllister <founder@engineered4ai.com>"]
+description = "vscode server backend for codingame monaco-vscode-api"
+license = "MIT"
+repository = "https://github.com/entrepeneur4lyf/monaco-vscode-server"
+keywords = ["vscode", "monaco", "editor", "tauri"]
+categories = ["web-programming", "development-tools"]
+
+[dependencies]
+tokio = { version = "^1.45", features = ["rt-multi-thread", "process", "time", "sync", "fs", "macros", "signal"] } # For async runtime, CLI and signal handling
+reqwest = { version = "^0.12", features = ["json", "stream"] }
+serde = { version = "^1.0", features = ["derive"] }
+serde_json = "1.0"
+thiserror = "2.0.12"
+clap = { version = "4.5.4", features = ["derive", "env"] }
+dirs = "6.0.0"
+flate2 = "1.0"
+tar = "0.4"
+futures-util = "0.3"
+
+[target.'cfg(windows)'.dependencies]
+zip = "0.6"
+
+[features]
+default = []
+
+[profile.release]
+opt-level = 2
+lto = "thin"
+codegen-units = 16
