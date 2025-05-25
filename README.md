@@ -1,4 +1,4 @@
-# codingame-monaco-vscode-server
+# monaco-vscode-server
 
 A Rust crate for managing VSCode server backend for applications using [monaco-vscode-api](https://github.com/CodinGame/monaco-vscode-api).
 
@@ -17,7 +17,7 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-codingame-monaco-vscode-server = "0.1.0" # Or the latest version
+monaco-vscode-server = "0.1.0" # Or the latest version
 ```
 
 ## Quick Start
@@ -25,7 +25,7 @@ codingame-monaco-vscode-server = "0.1.0" # Or the latest version
 ### Basic Usage
 
 ```rust
-use codingame_monaco_vscode_server::{VscodeServerManager, ServerConfig};
+use monaco_vscode_server::{VscodeServerManager, ServerConfig};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -53,7 +53,7 @@ In your Tauri app's `main.rs`:
 
 ```rust
 use tauri::{Manager, State};
-use codingame_monaco_vscode_server::{TauriVscodeServer, TauriConfig};
+use monaco_vscode_server::{TauriVscodeServer, TauriConfig};
 
 // State type for the server
 struct ServerState(Arc<TauriVscodeServer>);
@@ -114,7 +114,7 @@ await initialize({
 ### Custom Server Configuration
 
 ```rust
-use codingame_monaco_vscode_server::{VscodeServerManager, ServerConfig};
+use monaco_vscode_server::{VscodeServerManager, ServerConfig};
 
 let config = ServerConfig {
     port: 8001,
@@ -169,8 +169,8 @@ Helper specifically for Tauri applications.
 ## Server Storage
 
 By default, servers are stored in:
-- Linux/macOS: `~/.cache/codingame-monaco-vscode-server/`
-- Windows: `%LOCALAPPDATA%\codingame-monaco-vscode-server\`
+- Linux/macOS: `~/.cache/monaco-vscode-server/`
+- Windows: `%LOCALAPPDATA%\monaco-vscode-server\`
 
 Override the server directory using the `server_dir` field in `ServerConfig` or by setting the `VSCODE_SERVER_DIR` environment variable.
 

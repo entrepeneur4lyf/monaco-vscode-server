@@ -1,4 +1,4 @@
-//! `codingame-monaco-vscode-server` is a Rust crate for managing the VSCode server backend.
+//! `monaco-vscode-server` is a Rust crate for managing the VSCode server backend.
 //! 
 //! It provides functionalities to download, start, stop, and manage the VSCode server,
 //! which is used by `monaco-vscode-api` to provide a Monaco editor with VSCode services.
@@ -11,7 +11,7 @@
 //! ## Quick Start
 //! 
 //! ```rust,no_run
-//! use codingame_monaco_vscode_server::{VscodeServerManager, ServerConfig};
+//! use monaco_vscode_server::{VscodeServerManager, ServerConfig};
 //! 
 //! #[tokio::main]
 //! async fn main() -> Result<(), Box<dyn std::error::Error>> {
@@ -47,7 +47,7 @@ use tokio::sync::Mutex;
 use serde::{Deserialize, Serialize};
 use thiserror::Error;
 
-/// Error type for the `codingame-monaco-vscode-server` crate.
+/// Error type for the `monaco-vscode-server` crate.
 #[derive(Error, Debug)]
 pub enum ServerError {
     #[error("IO error: {0}")]
