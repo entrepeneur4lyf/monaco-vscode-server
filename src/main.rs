@@ -1,5 +1,5 @@
 use clap::{Parser, Subcommand};
-use codingame_monaco_vscode_server::{ServerConfig, VscodeServerManager};
+use monaco_vscode_server::{ServerConfig, VscodeServerManager};
 use std::path::PathBuf;
 
 #[derive(Parser)]
